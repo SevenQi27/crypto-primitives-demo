@@ -13,7 +13,7 @@ Bitcoin/Ethereum key derivation.
 |---|-------|--------|
 | 01 | Key pairs — RSA vs EC, and why Q = d·G is one-way | ✅ |
 | 02 | Digest → sign → verify — why you sign the hash, not the document | ✅ |
-| 03 | Certificate chains — what a CA actually vouches for | 🔜 |
+| 03 | Certificate chains — what a CA actually vouches for | ✅ |
 | 04 | AES + digital envelope — where symmetric and asymmetric each belong | 🔜 |
 | 05 | secp256k1 signature → Bitcoin/Ethereum address derivation | 🔜 |
 
@@ -22,6 +22,7 @@ Bitcoin/Ethereum key derivation.
 ```bash
 mvn compile exec:java -Dexec.mainClass=io.github.sevenqi27.crypto.d01.KeyPairsDemo
 mvn compile exec:java -Dexec.mainClass=io.github.sevenqi27.crypto.d02.DigestDemo
+mvn compile exec:java -Dexec.mainClass=io.github.sevenqi27.crypto.d03.CertificateDemo
 ```
 
 Requires Java 17+ and Maven.
