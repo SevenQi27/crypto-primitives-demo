@@ -15,7 +15,7 @@ Bitcoin/Ethereum key derivation.
 | 02 | Digest → sign → verify — why you sign the hash, not the document | ✅ |
 | 03 | Certificate chains — what a CA actually vouches for | ✅ |
 | 04 | AES-GCM + digital envelope — ECDH from scratch, why ECIES has no length limit, and the ECB penguin | ✅ |
-| 05 | secp256k1 signature → Bitcoin/Ethereum address derivation | 🔜 |
+| 05 | secp256k1 → Bitcoin/Ethereum address derivation — an address is just hash(pubkey), encoded | ✅ |
 
 ### Demo 04 bonus: determinism is leakage
 
@@ -39,6 +39,8 @@ mvn compile exec:java -Dexec.mainClass=io.github.sevenqi27.crypto.d03.Certificat
 mvn compile exec:java -Dexec.mainClass=io.github.sevenqi27.crypto.d04.DigitalEnvelopeDemo
 mvn compile exec:java -Dexec.mainClass=io.github.sevenqi27.crypto.d04.EcbPatternProbe
 mvn compile exec:java -Dexec.mainClass=io.github.sevenqi27.crypto.d04.EcbPenguinPicture
+mvn compile exec:java -Dexec.mainClass=io.github.sevenqi27.crypto.d05.EthAddressSample
+mvn compile exec:java -Dexec.mainClass=io.github.sevenqi27.crypto.d05.BtcAddressDemo
 ```
 
 Requires Java 17+ and Maven.
